@@ -53,6 +53,7 @@ When someone tries to use the wrong package manager, they see:
    ```bash
    git clone <repository-url>
    cd universal-command-enforcer
+   pnpm run postinstall  # <--- Convert all Bash files inside the scripts directory to executable
    pnpm run setup-project
    ```
 
@@ -62,6 +63,8 @@ When someone tries to use the wrong package manager, they see:
    ```
    
    **⚠️ Important:** After running the `setup-project` script, you must reload your shell for the changes to take effect in your current terminal session.
+
+   >In a typical project, the preinstall script is usually enough to prevent incorrect commands from running. However, setup-project becomes especially useful in more complex architectures. So, don’t be confused — even if the preinstall script seems to do the job, there’s still a reason for the setup-project shell configuration to exist.
 
 3. **Test the enforcement:**
    ```bash
