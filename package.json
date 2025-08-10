@@ -1,0 +1,15 @@
+{
+  "name": "universal-command-enforcer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "preinstall": "node scripts/detect.js",
+		"check-pm": "node scripts/detect.js",
+		"setup-project": "./scripts/setup.sh",
+    "postinstall": "chmod +x ./scripts/*"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
